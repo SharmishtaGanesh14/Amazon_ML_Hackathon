@@ -2,13 +2,13 @@
 
 A sophisticated multimodal machine learning pipeline that predicts product prices using both textual descriptions and product images. This solution combines advanced NLP techniques, computer vision, and ensemble modeling to achieve accurate price predictions.
 
-## 🏆 Competition Overview
+## Competition Overview
 
 This repository contains my solution for the Amazon ML Challenge 2025, which focused on predicting product prices using multimodal data (text + images). The challenge required handling real-world e-commerce data with varying quality text descriptions and product images.
 
-## 📁 Project Structure & File Descriptions
+## Project Structure & File Descriptions
 
-### 🔧 Core Pipeline Files
+### Core Pipeline Files
 
 #### `enhanced_multimodal_context_pipeline.py`
 **Purpose**: Feature engineering and context vector generation  
@@ -41,7 +41,7 @@ This repository contains my solution for the Amazon ML Challenge 2025, which foc
 - `MultimodalMLP`: Deep neural network with batch normalization
 - Ensemble prediction functions for model combination
 
-### 🚀 Advanced Variations
+### Advanced Variations
 
 #### `optimized2.py`
 **Purpose**: Hyperparameter-optimized pipeline with automated tuning  
@@ -73,7 +73,7 @@ This repository contains my solution for the Amazon ML Challenge 2025, which foc
 - Stratified data splitting based on price buckets
 - Nonlinear ensemble stacking
 
-## 🛠 Dependencies & Setup
+## Dependencies & Setup
 
 ### Required Packages
 ```bash
@@ -99,7 +99,7 @@ dataset/
     └── *_predictions.csv
 ```
 
-## 🚀 Usage Instructions
+## Usage Instructions
 
 ### Method 1: Standard Pipeline (Recommended)
 ```bash
@@ -122,7 +122,7 @@ python optimized2.py
 python model_with_noocr_fushion.py
 ```
 
-## 📊 Output Files
+## Output Files
 
 | File | Description |
 |------|-------------|
@@ -133,7 +133,7 @@ python model_with_noocr_fushion.py
 | `best_hyperparameters.json` | Optimal hyperparameters from tuning |
 | `training_metrics.json` | Training history and validation scores |
 
-## 🎯 Model Architecture Overview
+## Model Architecture Overview
 
 ### Two-Stage Pipeline
 
@@ -151,7 +151,7 @@ python model_with_noocr_fushion.py
 - **SMAPE Loss Function**: Optimized for symmetric percentage error
 - **Ensemble Learning**: Ridge regression stacker for final predictions
 
-## 🔍 Code Highlights
+## Code Highlights
 
 ### Efficient OCR Processing
 ```python
@@ -183,7 +183,7 @@ class OptimizedMLP(nn.Module):
         return out
 ```
 
-## 📊 Model Performance
+## Model Performance
 
 The ensemble approach combines:
 - **LightGBM**: Handles tabular features and feature interactions effectively
@@ -192,7 +192,7 @@ The ensemble approach combines:
 
 Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error), which is well-suited for price prediction tasks.
 
-## 💡 Technical Innovations
+## Technical Innovations
 
 1. **Multimodal Feature Fusion**: Seamlessly combines text, image, and numeric features
 2. **OCR Enhancement**: Extracts additional context from product images
@@ -202,7 +202,7 @@ Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error),
 6. **Memory Optimization**: Efficient batch processing and garbage collection
 7. **Residual Connections**: Skip connections for better gradient flow in deep networks
 
-## 🔬 Experimental Variations
+## Experimental Variations
 
 | Model Variant | Key Innovation | Complexity | OCR | Hyperparameter Tuning | Ensemble Method |
 |---------------|---------------|------------|-----|---------------------|-----------------|
@@ -210,7 +210,7 @@ Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error),
 | **Hyperparameter Optimized** | Automated Optuna Tuning | Very High | ✅ | Automated (100+ trials) | Ridge Stacker |
 | **No-OCR Fusion** | Residual Architecture + Advanced Scaling | Medium | ❌ | Manual | GradientBoosting Stacker |
 
-## 📝 Reproducibility
+## Reproducibility
 
 - **Fixed Random Seeds**: All models use consistent seeds (NumPy: 42, PyTorch: 42)
 - **Deterministic Operations**: Reproducible results across different runs
@@ -218,7 +218,7 @@ Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error),
 - **Version Control**: Clear dependency specifications and environment setup
 - **Comprehensive Logging**: Training metrics, validation curves, model checkpoints
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone repository and install dependencies**:
    ```bash
@@ -241,7 +241,7 @@ Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error),
 
 5. **Check predictions** in generated CSV files
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - [ ] Implement cross-validation for more robust validation
 - [ ] Add data augmentation techniques for images
@@ -250,7 +250,7 @@ Performance is evaluated using SMAPE (Symmetric Mean Absolute Percentage Error),
 - [ ] Add hyperparameter optimization using Bayesian methods
 - [ ] Integrate real-time inference capabilities
 
-## 📧 Contact
+## Contact
 
 Feel free to reach out for discussions about multimodal ML, price prediction, ensemble methods, or competition strategies!
 
